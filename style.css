@@ -1,0 +1,176 @@
+/* === GENERAL STYLES === */
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4; /* --- Enhancement: Slightly softer background color --- */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* === NAVIGATION BAR === */
+.navbar {
+    background: #222;
+    padding: 1rem 0; /* --- Enhancement: Using rem units for better scalability --- */
+    text-align: center;
+    border-bottom: 4px solid #db6d12;
+    position: sticky; /* --- Enhancement: Makes the nav bar stick to the top on scroll --- */
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 2rem; /* --- Enhancement: Increased gap for more breathing room --- */
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease; /* --- Enhancement: Smoother transition --- */
+}
+
+.navbar a:hover,
+.navbar a:focus { /* --- Enhancement: Added :focus for accessibility --- */
+    background: #db6d12;
+    color: #fff;
+}
+
+/* === HEADER === */
+header {
+    text-align: center;
+    padding: 4rem 1rem; /* --- Enhancement: More vertical padding to make it impactful --- */
+    background: #333;
+    color: white;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif; /* --- Change: Switched to Poppins for a more modern feel --- */
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* === MAIN CONTENT AREA === */
+main {
+    max-width: 1000px; /* --- Enhancement: Slightly wider for more space --- */
+    margin: 40px auto;
+    padding: 40px; /* --- Enhancement: Increased padding for more white space --- */
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* --- Enhancement: A deeper, softer shadow --- */
+}
+
+section {
+    margin-bottom: 50px; /* --- Enhancement: More space between sections --- */
+}
+
+h2 { /* --- Enhancement: Centralized styling for section titles --- */
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #db6d12;
+}
+
+/* === TEAM MEMBERS SECTION === */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* --- Enhancement: Wider min-width for cards --- */
+    gap: 30px;
+}
+
+.member-card {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-10px); /* --- Enhancement: Card lifts up on hover --- */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-card img { /* --- NEW: Styling for profile pictures --- */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #db6d12;
+}
+
+.member-card h3 {
+    font-size: 1.4rem;
+    color: #222;
+    margin-bottom: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.member-card p.role {
+    font-weight: 500;
+    color: #db6d12;
+    margin-bottom: 15px;
+}
+
+.member-card p.description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* === BUTTON STYLES === */
+.center-btn {
+    text-align: center; /* --- FIX: Simplified centering --- */
+    margin-top: 40px;
+}
+
+.btn {
+    display: inline-block;
+    background: #db6d12;
+    color: #fff;
+    padding: 14px 35px;
+    border-radius: 50px; /* --- Enhancement: A modern pill-shaped button --- */
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(219, 109, 18, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    /* --- FIX: Removed position, left, and transform properties that were causing issues --- */
+}
+
+.btn:hover {
+    background-color: #c95c07;
+    box-shadow: 0 8px 20px rgba(219, 109, 18, 0.5);
+    transform: translateY(-5px); /* --- FIX: Simplified the hover transform for a smooth lift --- */
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 30px;
+    background: #222;
+    color: #aaa;
+    border-top: 4px solid #db6d12;
+}
+
+.contact-info p { /* --- Enhancement: Better spacing for footer text --- */
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
